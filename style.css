@@ -1,31 +1,61 @@
+/* Dark Mode Styles */
 body {
-  background-color: darkslategrey;
+  background-color: black;
 }
 
 .mainContainer {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  
+}
+
+.toggle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  left: 0;
+  margin-left: 1px;
+  border: 1px solid gray;
+  transition: transform 0.3s ease;
 }
 
 .container {
   width: auto;
-   
 }
 
 .topContainer {
-  background-color: red;
+  position: relative;
+  background-color: black;
   color: antiquewhite;
   padding: 10px;
   text-align: center;
+  border: 5px solid white;
   border-radius: 20px 20px 0 0;
 }
 
 .valueEnter {
   width: 90%;
-  height: 60px;
+  height: 75px;
   margin-top: 10px;
   text-align: right;
   font-size: 1.5rem;
@@ -35,7 +65,6 @@ body {
   border: none;
   background-color: lightgoldenrodyellow;
   box-shadow: 0px 0px 5px beige;
-
 }
 
 .bottomContainer {
@@ -45,17 +74,24 @@ body {
   justify-items: center;
   align-items: center;
   gap: 20px;
-  padding: 10px;
+  padding: 20px 40px;
   background-color: black;
   border-radius: 0 0 20px 20px;
   padding-bottom: 20px;
+  border: 3px solid white;
 }
 
-.bottomContainer button {
+.bottomContainer .buttons,
+.buttonsadd,
+.buttonsdiv,
+.buttonssub,
+.buttonsc,
+.buttonsmul,
+.back,
+.buttonsequal {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-
   align-content: center;
   justify-content: center;
   background-color: gray;
@@ -63,11 +99,38 @@ body {
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
-  box-shadow: 0px 0px 5px beige;
+  box-shadow: 0px 0px 0px 1px beige;
 }
 
-.bottomContainer button:hover {
+.buttons:active {
+  color: red;
+}
+
+.buttons:hover {
   background-color: darkgray;
+}
+
+.buttonsadd,
+.buttonsdiv,
+.buttonssub,
+.buttonsmul {
+  background-color: orange;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.buttonsadd:hover,
+.buttonsdiv:hover,
+.buttonssub:hover,
+.buttonsmul:hover {
+  background-color: #FFBF78;
+}
+
+.buttonsequal {
+  background-color: beige;
+  color: black;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .buttonsdiv {
@@ -90,6 +153,15 @@ body {
   grid-row: 4/5;
 }
 
+.buttonsc,
+.back {
+  background-color: red;
+}
+
+.buttonsc:hover,
+.back:hover {
+  background-color: rgb(174, 42, 42);
+}
 
 .buttonsc {
   grid-column: 1/2;
@@ -99,4 +171,66 @@ body {
 .back {
   grid-column: 3 / 4;
   grid-row: 5 / 6;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+  background-color: white;
+}
+
+.light-mode .toggle{
+  background-color: black;
+}
+.light-mode .toggle::after{
+  background-color: white;
+}
+.light-mode .topContainer {
+  background-color: lightgray;
+  color: black;
+  border: 1px solid lightgray;
+}
+
+.light-mode .valueEnter {
+  background-color: white;
+  box-shadow: 0px 0px 5px gray;
+  color: black;
+}
+
+.light-mode .bottomContainer {
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+.light-mode .buttons,
+.light-mode .buttonsadd,
+.light-mode .buttonsdiv,
+.light-mode .buttonssub,
+.light-mode .buttonsc,
+.light-mode .buttonsmul,
+.light-mode .back,
+.light-mode .buttonsequal {
+  background-color: lightgray;
+  color: black;
+}
+
+.light-mode .buttonsadd,
+.light-mode .buttonsdiv,
+.light-mode .buttonssub,
+.light-mode .buttonsmul {
+  background-color: orange;
+  color: black;
+}
+
+.light-mode .buttonsequal {
+  background-color: orange;
+  color: black;
+}
+
+.light-mode .buttonsc,
+.light-mode .back {
+  background-color: lightcoral;
+}
+
+.light-mode .toggle::after {
+  transform: translateX(50px);
 }
