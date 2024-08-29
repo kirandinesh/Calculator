@@ -4,39 +4,10 @@ body {
 
 .mainContainer {
   display: flex;
-  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-}
-.toggle{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 30px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  background-color: aqua;
-}
-.toggle::after{
-  content: '';
-  position: absolute;
-  background-color: black;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  left: 0;
-  margin-left: 1px;
-  border: 1px solid gray;
-  overflow: hidden;
-}
-.toggle:hover:after {
-
-  transition:transform 0.3s ease;
-  transform: translateX(50px);
 }
 .container {
   width: auto;
