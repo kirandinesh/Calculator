@@ -1,5 +1,8 @@
 body {
   background-color: darkslategrey;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 .mainContainer {
@@ -7,35 +10,35 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 10vh;
 }
 
 .container {
-  width: 400px;
-   
+  width: 90vw;
+  max-width: 400px;
 }
 
 .topContainer {
+  width: 100%;
   background-color: black;
   color: antiquewhite;
-  padding: 10px;
+  padding: 1rem;
   text-align: center;
-  border-radius: 20px 20px 0 0;
+  border-radius: 1.25rem 1.25rem 0 0;
 }
 
 .valueEnter {
   width: 90%;
-  height: 60px;
-  margin-top: 10px;
+  height: 3rem;
+  margin-top: 1rem;
   text-align: right;
   font-size: 1.5rem;
   font-weight: 500;
-  padding-right: 10px;
-  border-radius: 10px;
+  padding-right: 1rem;
+  border-radius: 0.625rem;
   border: none;
   background-color: lightgoldenrodyellow;
-  box-shadow: 0px 0px 5px beige;
-
+  box-shadow: 0 0 0.313rem beige;
 }
 
 .bottomContainer {
@@ -44,27 +47,24 @@ body {
   grid-template-rows: repeat(5, 1fr);
   justify-items: center;
   align-items: center;
-  
-  height: auto;
-  gap: 20px;
-  padding: 10px;
+  width: 100%;
+  gap: 1.25rem;
+  padding: 1rem;
   background-color: black;
-  border-radius: 0 0 20px 20px;
-  padding-bottom: 20px;
+  border-radius: 0 0 1.25rem 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .bottomContainer button {
-  width: 70px;
-  height: 70px;
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 50%;
-  align-content: center;
-  justify-content: center;
   background-color: gray;
   border: none;
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
-  box-shadow: 0px 0px 5px beige;
+  box-shadow: 0 0 0.313rem beige;
 }
 
 .bottomContainer button:hover {
@@ -91,13 +91,59 @@ body {
   grid-row: 4/5;
 }
 
-
 .buttonsc {
   grid-column: 1/2;
   grid-row: 1/2;
 }
 
 .back {
-  grid-column: 3 / 4;
-  grid-row: 5 / 6;
+  grid-column: 3/4;
+  grid-row: 5/6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95vw;
+  }
+
+  .bottomContainer {
+    grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  }
+
+  .buttonsdiv,
+  .buttonsmul,
+  .buttonssub,
+  .buttonsadd,
+  .back {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+
+  .bottomContainer button {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .valueEnter {
+    width: 95%;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    padding-right: 0.625rem;
+  }
+
+  .bottomContainer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .bottomContainer button {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
 }
