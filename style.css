@@ -1,0 +1,105 @@
+body {
+  background-color: darkslategrey;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.container {
+  width: auto;
+  border-radius: 20px;
+ 
+}
+
+.topContainer {
+  width: 95.3%;
+  background-color: black;
+  color: antiquewhite;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.valueEnter {
+  width: 90%;
+  height: 60px;
+  margin-top: 10px;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-right: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: lightgoldenrodyellow;
+  box-shadow: 0px 0px 5px beige;
+
+}
+
+.bottomContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+  width: 400px;
+  height: auto;
+  gap: 20px;
+  padding: 10px;
+  background-color: black;
+  border-radius: 0 0 20px 20px;
+  padding-bottom: 20px;
+}
+
+.bottomContainer button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  align-content: center;
+  justify-content: center;
+  background-color: gray;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px beige;
+}
+
+.bottomContainer button:hover {
+  background-color: darkgray;
+}
+
+.buttonsdiv {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+
+.buttonsmul {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+
+.buttonssub {
+  grid-column: 4/5;
+  grid-row: 3/4;
+}
+
+.buttonsadd {
+  grid-column: 4/5;
+  grid-row: 4/5;
+}
+
+
+.buttonsc {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.back {
+  grid-column: 3 / 4;
+  grid-row: 5 / 6;
+}
