@@ -1,20 +1,29 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Dark Mode Styles */
 body {
   background-color: black;
+  font-family: Arial, sans-serif;
+  color: antiquewhite;
+  margin: 0;
+  padding: 0;
 }
 
 .mainContainer {
   display: flex;
-  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
-  
+  margin-top: 5vh;
+  padding: 0 5vw;
 }
 
 .toggle {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +33,7 @@ body {
   margin-bottom: 20px;
   background-color: white;
   cursor: pointer;
+  position: relative;
 }
 
 .toggle::after {
@@ -33,18 +43,17 @@ body {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  left: 0;
-  margin-left: 1px;
+  left: 1px;
   border: 1px solid gray;
   transition: transform 0.3s ease;
 }
 
 .container {
-  width: auto;
+  width: 100%;
+  max-width: 25rem;
 }
 
 .topContainer {
-  position: relative;
   background-color: black;
   color: antiquewhite;
   padding: 10px;
@@ -54,7 +63,7 @@ body {
 }
 
 .valueEnter {
-  width: 90%;
+  width: 100%;
   height: 75px;
   margin-top: 10px;
   text-align: right;
@@ -70,26 +79,18 @@ body {
 .bottomContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  justify-items: center;
-  align-items: center;
   gap: 20px;
-  padding: 20px 40px;
+  padding: 20px 20px; 
   background-color: black;
   border-radius: 0 0 20px 20px;
-  padding-bottom: 20px;
   border: 3px solid white;
+  width: 100%; /* Ensure the container takes up the full width */
+  box-sizing: border-box; /* Include padding in the width */
 }
 
-.bottomContainer .buttons,
-.buttonsadd,
-.buttonsdiv,
-.buttonssub,
-.buttonsc,
-.buttonsmul,
-.back,
-.buttonsequal {
-  width: 4rem;
+
+.bottomContainer .buttons,.buttonsadd,.buttonsdiv,.buttonssub,.buttonsc,.buttonsmul,.back,.buttonsequal {
+  width: 95%; /* Adjust width to fill each grid cell */
   height: 4rem;
   border-radius: 50%;
   align-content: center;
@@ -115,7 +116,7 @@ body {
 .buttonssub,
 .buttonsmul {
   background-color: orange;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
@@ -129,28 +130,8 @@ body {
 .buttonsequal {
   background-color: beige;
   color: black;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
-}
-
-.buttonsdiv {
-  grid-column: 4/5;
-  grid-row: 1/2;
-}
-
-.buttonsmul {
-  grid-column: 4/5;
-  grid-row: 2/3;
-}
-
-.buttonssub {
-  grid-column: 4/5;
-  grid-row: 3/4;
-}
-
-.buttonsadd {
-  grid-column: 4/5;
-  grid-row: 4/5;
 }
 
 .buttonsc,
@@ -163,9 +144,29 @@ body {
   background-color: rgb(174, 42, 42);
 }
 
+.buttonsdiv {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+
+.buttonsmul {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+.buttonssub {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+
+.buttonsadd {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+}
+
 .buttonsc {
-  grid-column: 1/2;
-  grid-row: 1/2;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .back {
@@ -176,14 +177,17 @@ body {
 /* Light Mode Styles */
 body.light-mode {
   background-color: white;
+  color: black;
 }
 
-.light-mode .toggle{
+.light-mode .toggle {
   background-color: black;
 }
-.light-mode .toggle::after{
+
+.light-mode .toggle::after {
   background-color: white;
 }
+
 .light-mode .topContainer {
   background-color: lightgray;
   color: black;
@@ -218,7 +222,6 @@ body.light-mode {
 .light-mode .buttonssub,
 .light-mode .buttonsmul {
   background-color: orange;
-  color: black;
 }
 
 .light-mode .buttonsequal {
