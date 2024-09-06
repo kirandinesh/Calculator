@@ -1,7 +1,10 @@
+
+
 body {
   background-color: white;
   color: black;
 }
+
 
 .dark-mode {
   background-color: black;
@@ -13,14 +16,14 @@ body {
   margin: 0 auto;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 30px;
+  border-radius: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 input[type="text"] {
   width: 100%;
-  border-radius: 20px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 20px;
   font-size: 20px;
   background-color: rgba(228, 224, 224, 0.663);
   text-align: right;
@@ -28,6 +31,7 @@ input[type="text"] {
   box-sizing: border-box;
   margin-bottom: 10px;
   padding-right: 10px; 
+  
 }
 
 .buttons {
@@ -35,9 +39,11 @@ input[type="text"] {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 10px;
+  margin:10px 5px;
 }
 
 button {
+  -webkit-tap-highlight-color: transparent;
   padding: 10px;
   font-size: 18px;
   font-weight: 550;
@@ -47,7 +53,7 @@ button {
   background-color: #f0f0f0;
 }
 
-button:hover {
+button:active {
   background-color: #e0e0e0;
 }
 
